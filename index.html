@@ -1,58 +1,374 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | บุศยา วิศรุตา</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boosaya Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#eef7ff;
+color:#222;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0b74ff;
+padding:18px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:white;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#bfe2ff;
+}
+
+section{
+padding:100px 10%;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#0b74ff,#6ec6ff);
+color:white;
+}
+
+.hero img{
+width:190px;
+height:190px;
+border-radius:50%;
+border:6px solid white;
+margin-bottom:20px;
+object-fit:cover;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.hero h2{
+font-weight:300;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 35px;
+background:white;
+color:#0b74ff;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+.title{
+text-align:center;
+font-size:35px;
+color:#0b74ff;
+margin-bottom:50px;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.skill{
+background:white;
+padding:25px;
+text-align:center;
+border-radius:18px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.skill:hover{
+transform:translateY(-8px);
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.project{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.project img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.project h3{
+padding:20px;
+color:#0b74ff;
+}
+
+.project p{
+padding:0 20px 20px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+display:inline-block;
+margin:10px;
+padding:14px 30px;
+background:#0b74ff;
+color:white;
+text-decoration:none;
+border-radius:30px;
+}
+
+footer{
+background:#0b74ff;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:60px;
+}
+
+@media(max-width:768px){
+
+.about{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+nav{
+display:none;
+}
+
+}
+</style>
+
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">
-            Portfolio
-        </div>
-        <ul>
-            <li><a href="index.html" class="active">หน้าหลัก</a></li>
-            <li><a href="education.html">การศึกษา</a></li>
-            <li><a href="personal.html">ประวัติส่วนตัว</a></li>
-            <li><a href="activities.html">ผลงาน</a></li>
-            <li><a href="contact.html">ติดต่อ</a></li>
-        </ul>
-    </nav>
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>สวัสดีค่ะ</h1>
-            <h2>ฉันชื่อ <span>นางสาวบุศยา วิศรุตา</span></h2>
-            <p>
-                ยินดีต้อนรับสู่เว็บไซต์ Portfolio
-                เว็บไซต์นี้รวบรวมประวัติส่วนตัว ผลงาน กิจกรรม
-                และข้อมูลการศึกษาของฉัน
-            </p>
-            <div class="btn-group">
-                <a href="personal.html" class="btn">เกี่ยวกับฉัน</a>
-                <a href="activities.html" class="btn-outline">ผลงาน</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="images/profile.jpg" alt="profile">
-        </div>
-    </section>
-    <!-- About Website -->
-    <section class="about">
-        <h2>เกี่ยวกับเว็บไซต์</h2>
-        <p>
-            เว็บไซต์นี้จัดทำขึ้นเพื่อใช้ประกอบ Portfolio
-            สำหรับการศึกษาต่อระดับอุดมศึกษา
-            โดยรวบรวมข้อมูลส่วนตัว ประวัติการศึกษา
-            ผลงาน กิจกรรม และช่องทางการติดต่อไว้ในที่เดียว
-        </p>
-    </section>
-    <footer>
-        © 2026 Portfolio | บุศยา วิศรุตา
-    </footer>
-    <script src="js/script.js"></script>
+
+<header>
+
+<div class="logo">BOOSAYA</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<img src="https://via.placeholder.com/200" alt="Profile">
+
+<h1>บุศยา วิศรุตา</h1>
+
+<h2>Student | Graphic Designer | Creative</h2>
+
+<a href="#about" class="btn">Explore</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="about">
+
+<div class="card">
+<h3>แนะนำตัว</h3>
+<br>
+<p>
+สวัสดีค่ะ ฉันชื่อ บุศยา วิศรุตา
+เป็นนักเรียนที่สนใจด้านการออกแบบกราฟิก
+การสร้างโปสเตอร์ โลโก้ เว็บไซต์
+และการพัฒนาเว็บไซต์ด้วย HTML และ CSS
+</p>
+</div>
+
+<div class="card">
+<h3>Education</h3>
+<br>
+<p>
+PHANTHONG SCHOOL
+<br><br>
+กำลังศึกษา และพัฒนาทักษะด้าน
+Graphic Design
+Web Design
+UI Design
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+<h3>HTML</h3>
+</div>
+
+<div class="skill">
+<h3>CSS</h3>
+</div>
+
+<div class="skill">
+<h3>Canva</h3>
+</div>
+
+<div class="skill">
+<h3>Photoshop</h3>
+</div>
+
+<div class="skill">
+<h3>Graphic Design</h3>
+</div>
+
+<div class="skill">
+<h3>Logo Design</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800">
+
+<h3>Portfolio Website</h3>
+
+<p>เว็บไซต์ Portfolio ส่วนตัว</p>
+
+</div>
+
+<div class="project">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800">
+
+<h3>Graphic Design</h3>
+
+<p>ออกแบบโปสเตอร์และโลโก้</p>
+
+</div>
+
+<div class="project">
+
+<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800">
+
+<h3>School Projects</h3>
+
+<p>ผลงานสำหรับกิจกรรมของโรงเรียน</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact</h2>
+
+<div class="contact">
+
+<a href="#">Facebook</a>
+
+<a href="#">Instagram</a>
+
+<a href="#">Email</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Boosaya Visaruta | All Rights Reserved
+
+</footer>
+
 </body>
 </html>
