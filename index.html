@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ประวัติส่วนตัว | บุศยา วิศรุตา </title>
+<title>Portfolio ของ กรเอก มหาโภคินวงษ์</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,42 +11,79 @@
 <nav class="topnav">
   <div class="brand">
     <span class="brand-badge">OQ</span>
-    บุศยา วิศรุตา
+    กรเอก มหาโภคินวงษ์
   </div>
   <button class="nav-toggle" aria-label="เปิดเมนู">&#9776;</button>
   <ul class="navlinks">
-    <li><a href="index.html">หน้าหลัก</a></li>
-    <li><a href="personal.html" aria-current="page">ประวัติส่วนตัว</a></li>
+    <li><a href="index.html" aria-current="page">หน้าหลัก</a></li>
+    <li><a href="personal.html">ประวัติส่วนตัว</a></li>
     <li><a href="education.html">ประวัติการศึกษา</a></li>
     <li><a href="activities.html">ผลงาน</a></li>
     <li><a href="contact.html">ติดต่อ</a></li>
-  </0
+  </ul>
 </nav>
 
 <main>
-  <header class="page-header">
-    <span class="eyebrow">01 · About</span>
-    <h1>ประวัติส่วนตัว</h1>
-  </header>
-
-  <div class="card">
-    <div class="profile-block">
-      <!-- รูปโปรไฟล์: เปลี่ยนไฟล์ในโฟลเดอร์ images/ แล้วแก้ src ด้านล่างได้เลย -->
-      <img class="profile-photo" src="images/พานทอง.png" alt="รูปกรเอก มหาโภคินวงษ์">
-
-      <dl class="info-list">
-        <dt>ชื่อ</dt><dd>บุศยา วิศรุตา</dd>
-        <dt>ชื่อเล่น</dt><dd>เมจิค</dd>
-        <dt>วันเกิด</dt><dd>07/10/2551</dd>
-        <dt>เบอร์โทร</dt><dd>062-948-2284</dd>
-        <dt>ส่วนสูง</dt><dd>164 ซม.</dd>
-        <dt>น้ำหนัก</dt><dd>53 กก.</dd>
-      </dl>
+  <section class="hero">
+    <div class="bubbles">
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
+      <span class="bubble"></span>
     </div>
-  </div>
+
+    <div>
+      <span class="eyebrow">Welcome aboard</span>
+      <h1>Portfolio of <br><span class="accent">Gornerk Mahapokinwong</span></h1>
+      <p class="lede">นักเรียนชั้นมัธยมศึกษาปีที่ 6 เว็บไซต์นี้รวบรวมประวัติส่วนตัว ประวัติการศึกษา และผลงานของผมไว้ในที่เดียว เพื่อใช้แนะนําตัวสําหรับการศึกษาต่อและโอกาสต่างๆ</p>
+      <div class="hero-cta">
+        <a href="personal.html" class="btn btn-solid">ดูประวัติส่วนตัว</a>
+        <a href="contact.html" class="btn btn-ghost">ช่องการติดต่อ</a>
+      </div>
+    </div>
+
+    <div class="id-card">
+      <div class="id-card-inner">
+        <!-- รูปหลักของหน้าแรก: ใส่ไฟล์ images/รูปเมจิก ID card.png -->
+        <img src="images/รูปเมจิก ID card.png" alt="รูปกรเอก มหาโภคินวงษ์" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span style="display:none; align-items:center; justify-content:center; height:100%;">รูปเมจิก ID card.png</span>
+      </div>
+      <span class="id-ribbon">STUDENT ID · โอคิว</span>
+    </div>
+  </section>
+
+  <div class="wave-band"></div>
+
+  <section>
+    <div class="grid-links">
+      <a class="link-card" href="personal.html">
+        <span class="num">จุดที่ 01</span>
+        <h3>ประวัติส่วนตัว</h3>
+        <p>ข้อมูลทั่วไปและรูปภาพของผม</p>
+      </a>
+      <a class="link-card" href="education.html">
+        <span class="num">จุดที่ 02</span>
+        <h3>ประวัติการศึกษา</h3>
+        <p>เส้นทางการเรียนตั้งแต่อดีตถึงปัจจุบัน</p>
+      </a>
+      <a class="link-card" href="activities.html">
+        <span class="num">จุดที่ 03</span>
+        <h3>ผลงาน</h3>
+        <p>ผลงานและกิจกรรมที่เคยทํา</p>
+      </a>
+      <a class="link-card" href="contact.html">
+        <span class="num">จุดที่ 04</span>
+        <h3>ติดต่อ</h3>
+        <p>ช่องทางการติดต่อผม</p>
+      </a>
+    </div>
+  </section>
 </main>
 
-<footer>&copy; 2026 บุศยา วิศรุตา — Portfolio Website</footer>
+<footer>&copy; 2026 กรเอก มหาโภคินวงษ์ — Portfolio Website</footer>
 
 <script src="script.js"></script>
 </body>
