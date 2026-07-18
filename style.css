@@ -454,11 +454,15 @@ dl.info-list dd {
 .timeline h3 { margin-top: 4px; font-size: 1.08rem; }
 .timeline p { color: var(--ink-soft); margin: 6px 0 0; font-size: 0.94rem; }
 
-/* ---------- Works / activities — porthole grid ---------- */
+/* ---------- Works / activities — 2-per-row certificate frames ---------- */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 24px;
+}
+
+@media (max-width: 640px) {
+  .work-grid { grid-template-columns: 1fr; }
 }
 
 .work-card {
@@ -470,53 +474,41 @@ dl.info-list dd {
 
 .work-card.is-visible { opacity: 1; transform: translateY(0); }
 
-.porthole {
+.frame {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  max-width: 210px;
+  aspect-ratio: 4 / 3;
   margin: 0 auto 14px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 32% 28%, #eaf7fb, #9fd3e2 70%, #4C6B7D 100%);
-  padding: 10px;
-  box-shadow: 0 14px 28px rgba(5,42,67,0.22), inset 0 0 0 3px rgba(255,255,255,0.5);
+  border-radius: 12px;
+  background: var(--foam);
+  box-shadow: 0 14px 28px rgba(5,42,67,0.16);
   position: relative;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.work-card:hover .porthole { transform: rotate(-3deg) scale(1.03); }
+.work-card:hover .frame { transform: translateY(-4px); box-shadow: 0 20px 36px rgba(5,42,67,0.22); }
 
-.porthole-inner {
+.frame-inner {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 10px;
   overflow: hidden;
-  border: 4px solid var(--ocean-dark);
-  background: var(--foam);
+  border: 3px solid var(--ink-soft);
+  background: var(--card);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.porthole-inner img { width: 100%; height: 100%; object-fit: cover; }
+/* object-fit: contain so certificate text never gets cropped */
+.frame-inner img { width: 100%; height: 100%; object-fit: contain; }
 
-.porthole-inner span {
+.frame-inner span {
   font-family: 'Prompt', sans-serif;
   color: var(--ink-soft);
   font-size: 0.75rem;
+  padding: 0 12px;
+  text-align: center;
 }
-
-/* rivets around the porthole rim */
-.porthole::before, .porthole::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 0 0 2px var(--ocean-dark);
-}
-.porthole::before { top: 8px; left: 50%; transform: translateX(-50%); }
-.porthole::after   { bottom: 8px; left: 50%; transform: translateX(-50%); }
 
 .work-card h3 { font-size: 1.02rem; }
 .work-card p { color: var(--ink-soft); font-size: 0.88rem; margin: 6px 0 0; }
